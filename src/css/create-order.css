@@ -1,0 +1,180 @@
+body.show-modal-order-now {
+  overflow: hidden;
+}
+
+body.show-modal-order-now .order-now-backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--var-background) inset;
+  -webkit-text-fill-color: var(--var-text);
+}
+.order-now-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(4, 66, 28, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+}
+
+.order-now-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 335px;
+  opacity: 1;
+  padding: 28px 20px;
+  background-color: var(--var-background);
+  border-radius: 15px;
+}
+
+.order-now-modal-title {
+  margin: 0;
+  color: var(--var-dark);
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.order-now-modal-button-close-js {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.order-now-form-wrap {
+  overflow-y: auto;
+}
+
+.order-now-modal-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input:hover::placeholder,
+textarea:hover::placeholder {
+  color: #9bb537;
+}
+
+.order-now-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-now-modal-form span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(5, 5, 5, 0.2);
+}
+
+.order-now-modal-form-input {
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 43px;
+}
+
+.order-now-modal-form-input,
+.order-now-modal-form textarea {
+  outline: none;
+  width: 295px;
+  border-radius: 15px;
+  color: var(--var-text);
+  border: 1px solid var(--var-grey-menu);
+  background-color: var(--var-background);
+  transition: border-color 500ms;
+}
+
+.order-now-modal-form-input:hover,
+.order-now-modal-form textarea:hover {
+  outline: none;
+  border: 2px solid #9bb537;
+}
+
+.order-now-modal-form textarea {
+  margin-bottom: 40px;
+  padding: 15px;
+  height: 100px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.order-now-modal-form button {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  background: #9bb537;
+  color: white;
+  cursor: pointer;
+}
+
+.order-now-modal-close-svg path {
+  stroke: var(--var-dark);
+  transition: stroke 250ms;
+}
+
+.order-now-modal-close-svg:hover path {
+  stroke: #9bb537;
+}
+.order-now-modal-form-button-submit {
+  transition: color 500ms;
+}
+.section__button1:hover {
+  cursor: pointer;
+}
+
+.order-now-modal-form-button-submit:is(:hover, :focus) {
+  color: #050505;
+}
+@media screen and (max-width: 320px) {
+  .order-now-modal {
+    width: calc(100% - 20px);
+  }
+  .order-now-modal-form input,
+  .order-now-modal-form textarea {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .order-now-modal {
+    max-width: 440px;
+    padding: 40px;
+  }
+  .order-now-modal-form-input,
+  .order-now-modal-form textarea {
+    width: 360px;
+    border-radius: 15px;
+    border: 1px solid var(--var-grey);
+  }
+  .order-now-modal-form-input {
+    height: 48px;
+  }
+  .order-now-modal-close-svg {
+    width: 24px;
+    height: 24px;
+  }
+}

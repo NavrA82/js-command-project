@@ -1,0 +1,264 @@
+/* 
+.dark-extra-filters-form-input - на інпут в inputExtraFiltersForm темна версія
+.light-extra-filters-form-input - на інпут в inputExtraFiltersForm світла версія
+ 
+extra-filters-search-icon-close-dark - на свг в  searchResetBtnInputExtraFiltersForm темна версія
+extra-filters-search-icon-close-light - на свг в  searchResetBtnInputExtraFiltersForm світла версія
+
+.dark-extra-filters-label - на лейбл.  треба буде винести окремим рефом. темна версія.
+.light-extra-filters-label - на лейбл. треба буде винести окремим рефом. світла версія
+
+.dark-extra-filters-form-select - на форму селекту в timeExtraFiltersForm , areaExtraFiltersForm та ingredientsExtraFiltersForm . темна тема
+.light-extra-filters-form-select - на форму селекту в timeExtraFiltersForm , areaExtraFiltersForm та ingredientsExtraFiltersForm . світла тема
+*/
+
+.extra-filters-form-input:hover {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.extra-filters-form-input:focus {
+  outline: none;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.extra-filters-reset-btn-wrap {
+  display: flex;
+  justify-content: end;
+  margin-top: 14px;
+}
+
+.extra-filters-form {
+  display: flex;
+  /* height: auto; */
+  gap: 16px;
+  /* flex-direction: row; */
+
+  flex-wrap: wrap;
+}
+
+.form-el-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--var-grey);
+}
+
+.extra-filters-form-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.16;
+  color: var(--var-grey);
+}
+
+.extra-filters-form-input {
+  display: inline-block;
+  margin-top: 8px;
+  max-width: 335px;
+  min-height: 46px;
+  padding: 14px 122px 14px 48px;
+  border-radius: 15px;
+  border: 1px solid var(--var-grey-menu);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  background-color: transparent;
+}
+
+.light-extra-filters-form-input::placeholder {
+  color: var(--var-grey);
+}
+
+.extra-filters-search-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 18px;
+  top: 36px;
+  fill: rgba(5, 5, 5, 50%);
+}
+
+.extra-filters-search-reset-btn {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 18px;
+  top: 38px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.extra-filters-search-icon-close-lignt {
+  stroke: var(--primary-black-color);
+}
+
+.extra-filters-search-icon-close-dark {
+  stroke: var(--primary-white-color);
+}
+
+.extra-filters-form-input:hover + .extra-filters-search-icon {
+  fill: var(--accent-color);
+  color: var(--primary-white-color);
+}
+.extra-filters-form-input::placeholder:hover {
+  color: var(--primary-white-color);
+}
+
+.extra-filters-form-select {
+  display: inline-block;
+  margin-top: 8px;
+  width: 160px;
+  min-height: 46px;
+  padding: 14px 18px;
+  border-radius: 15px;
+  border: 1px solid var(--var-grey-menu);
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  overflow: auto;
+}
+
+.light-extra-filters-label,
+.light-extra-filters-form-select {
+  color: var(--var-grey);
+}
+
+.dark-extra-filters-label:hover,
+.dark-extra-filters-form-select:hover {
+  color: var(--accent-color);
+}
+
+.form-el-time,
+.form-el-area {
+  flex-basis: calc((100% - 14px) / 2);
+}
+
+.form-el-ingredients .extra-filters-form-select {
+  width: 188px;
+}
+
+.light-extra-filters-form-select:is(:hover, :focus) {
+  color: var(--accent-color);
+}
+
+.dark-extra-filters-form-select:is(:hover, :focus) {
+  color: #fff;
+}
+
+option {
+  color: rgba(5, 5, 5, 0.5);
+  height: 188px;
+  overflow: auto;
+}
+option:is(:hover, :focus) {
+  color: var(--primary-black-color);
+  background-color: transparent;
+}
+
+.option-active {
+  color: var(--primary-black-color);
+  background-color: transparent;
+}
+
+.form-el-time option {
+  height: 125px;
+}
+
+.option-choosed {
+  color: var(--primary-black-color);
+  background-color: transparent;
+}
+.extra-filters-reset-btn {
+  color: var(--var-grey);
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.33;
+  background: transparent;
+  padding: 0;
+  border: none;
+  /* margin-left: 230px; */
+  height: 16px;
+  width: 105px;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: end;
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+}
+.form-el-search {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  .extra-filters-form {
+    gap: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .extra-filters-form {
+    gap: 16px;
+    /* width: 544px; */
+    /* width: 419px; */
+    /* width: 419px; оскільки кнопку перенесла всередину форми */
+  }
+
+  .extra-filters-form-label {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .extra-filters-form-input {
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 1.25;
+    width: 278px;
+  }
+
+  .extra-filters-search-icon {
+    top: 41px;
+  }
+
+  .extra-filters-search-reset-btn {
+    top: 43px;
+  }
+
+  .extra-filters-form-select {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .form-el-time,
+  .form-el-area {
+    flex-basis: 0;
+  }
+
+  .form-el-time .extra-filters-form-select {
+    width: 125px;
+  }
+
+  .form-el-area .extra-filters-form-select {
+    width: 141px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .extra-filters-form-wrap {
+    width: 782px;
+  }
+}
